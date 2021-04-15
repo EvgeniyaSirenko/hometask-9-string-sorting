@@ -35,13 +35,7 @@ public class AppRunner {
 			}
 		}
 		LOG.info(String.format("Sorted by name: %s", result.toString()));
-		LOG.info("Sorted by quantity: ");
 		Map sortedMap = sortByValues(result);
-		Set set = sortedMap.entrySet();
-		Iterator i = set.iterator();
-		while (i.hasNext()) {
-			Map.Entry me = (Map.Entry) i.next();
-			LOG.info(me.getKey() + " - " + me.getValue());
-		}
+		LOG.info(String.format("Sorted by quantity: %s", sortedMap.toString()));
 	}
 }
